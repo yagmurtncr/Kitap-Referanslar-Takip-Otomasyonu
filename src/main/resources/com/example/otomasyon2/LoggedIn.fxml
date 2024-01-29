@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="502.0" prefWidth="810.0" style="-fx-background-color: #FFDAB9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.otomasyon2.LoggedIn">
+   <children>
+      <Button fx:id="btn_login" layoutX="537.0" layoutY="270.0" mnemonicParsing="false" onAction="#loginact" prefHeight="30.0" prefWidth="206.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="Login" textFill="PEACHPUFF">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtfusername" layoutX="537.0" layoutY="173.0" prefHeight="30.0" prefWidth="206.0" style="-fx-background-radius: 10;" />
+      <Text fx:id="txtusername" fill="WHITE" layoutX="410.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="126.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtpassword" fill="WHITE" layoutX="410.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Pane prefHeight="506.0" prefWidth="352.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="296.0" fitWidth="473.0" layoutX="28.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Görseller_java%20otomasyon/library_10433056.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Text fx:id="txtuser" fill="WHITE" layoutX="414.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Not a user?" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Text>
+      <Button fx:id="btn_sign_up" layoutX="671.0" layoutY="332.0" mnemonicParsing="false" onAction="#signupact" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Sign Up" textFill="PEACHPUFF">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <PasswordField fx:id="txtfpassword" layoutX="537.0" layoutY="219.0" prefHeight="30.0" prefWidth="206.0" style="-fx-background-radius: 10;" />
+   </children>
+</AnchorPane>
