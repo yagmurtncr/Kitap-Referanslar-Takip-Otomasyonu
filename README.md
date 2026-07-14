@@ -22,6 +22,26 @@ title, author, and cover image.
 
 ---
 
+## 🏗️ Architecture
+
+```mermaid
+flowchart TD
+    subgraph View["Presentation (JavaFX / FXML)"]
+        Auth["SignUp · LoggedIn"]
+        Cat["Book catalog pages"]
+    end
+
+    Ctrl["Controllers (Java)"]
+    Methods["Methods (JDBC)"]
+
+    Auth --> Ctrl
+    Cat --> Ctrl
+    Ctrl --> Methods
+    Methods --> MySQL[("MySQL<br/>UserAccounts · books")]
+```
+
+---
+
 ## 📁 Project Structure
 
 ```text
