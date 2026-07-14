@@ -15,8 +15,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class LoggedIn  {
@@ -56,11 +56,13 @@ public class LoggedIn  {
         Methods connectNow = new Methods();
         Connection connectDB = connectNow.getConnection();
 
-        String verifyLogin ="SELECT count(1) FROM UserAccounts WHERE username = '"+txtfusername.getText()+"'AND password ='"+txtfpassword.getText()+"'";
+        String verifyLogin = "SELECT count(1) FROM UserAccounts WHERE username = ? AND password = ?";
 
     try{
-        Statement statement = connectDB.createStatement();
-        ResultSet queryResult = statement.executeQuery(verifyLogin);
+        PreparedStatement statement = connectDB.prepareStatement(verifyLogin);
+        statement.setString(1, txtfusername.getText());
+        statement.setString(2, txtfpassword.getText());
+        ResultSet queryResult = statement.executeQuery();
 
         while(queryResult.next()){
             if(queryResult.getInt(1)==1){
